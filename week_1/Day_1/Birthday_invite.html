@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday invite</title>
+</head>
+<body>
+    
+    <h1>It's my Birthday(soon)!</h1>
+    <h2>When ? <span>On the 14th of october</span></h2>
+    <p id="clock"></p>
+    <section id="details">
+    <img src="https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/rainbow_cake_20402_16x9.jpg" id="cakeImg">
+    <h3>What to bring:</h3>
+    <ul>
+        <li>Baloons(blue ones prefered!)</li>
+        <li>Cake(Tiramisu is my favorite!)</li>
+        <li>An Apretite(Food and drinks have been taken care of!)</li>
+    </ul>
+</section>
+    <h3>Where ? </h3>
+
+    <iframe width="100%" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=15.43682634830475%2C47.05198898156981%2C15.445784926414492%2C47.05524179933457&amp;layer=mapnik" 
+    style="border: 10px solid rgb(84, 84, 84)"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=18/47.053615/15.441306">View Larger Map</a></small>
+
+<style>
+    body {
+        background-color: rgb(6, 87, 65);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgb(207, 255, 230);
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        line-height: 2rem;
+    }
+    ul {
+        list-style: circle;
+        height: 100%;
+       
+    
+      
+    }
+    #cakeImg{
+    height: 200px; width: 200px;
+    border-radius: 50%;
+    background-position: cover;
+    }
+
+    a {
+        color: rgb(243, 246, 237);
+        font-size: 2rem;
+        text-decoration: none;
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        
+    }
+    #clock {
+        background-color: rgb(46, 113, 64);
+        color: yellow;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+    }
+   
+</style>
+
+<script>
+
+    const updateClock = () => {
+        const targetDate = new Date('2025-09-13T23:59:59')
+        const now = new Date();
+        let diffMilliseconds = targetDate - now;
+
+        if (diffMilliseconds <= 0) {
+            document.getElementById("clock").innerText = "Countdown Complete!";
+            clearInterval(timer);
+            return;
+        }
+
+        const diffSeconds = Math.floor(diffMilliseconds / 1000) % 60;
+        const diffMinutes = Math.floor(diffMilliseconds / (1000 * 60)) % 60;
+        const diffHours = Math.floor(diffMilliseconds / (1000 * 60 * 60)) % 24;
+
+        const diffYears = targetDate.getFullYear() - now.getFullYear();
+        let diffMonths = targetDate.getMonth() - now.getMonth();
+        let diffDays = targetDate.getDate() - now.getDate();
+
+        if (diffDays < 0) {
+            diffMonths -= 1;
+            diffDays += new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+        }
+        if (diffMonths < 0) {
+            diffMonths += 12;
+        }
+
+        const clock = document.getElementById("clock");
+        clock.innerText = ` ${diffYears} Years ${diffMonths} Months ${diffDays} Days ${diffHours} Hours ${diffMinutes} Minutes ${diffSeconds} Seconds`;
+    };
+
+
+    const timer = setInterval(updateClock, 1000);
+    updateClock(); 
+
+
+</script>
+</body>
+</html>

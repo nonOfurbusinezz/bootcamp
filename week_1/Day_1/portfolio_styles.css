@@ -1,0 +1,171 @@
+html {
+    background-color: rgb(13, 12, 12);
+    overflow-x: hidden;
+}
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    
+}
+
+header {
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
+    border-bottom: 5px solid salmon;
+    animation: colorChangeSlideIn .7s linear forwards;
+}
+
+#name {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#role {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+#navigationBtn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    height: 50px; width: 50px;
+    border-radius: 50%;
+    opacity: 0.4;
+    border: none;
+    background-color: transparent;
+    
+}
+.fa-bars {
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+}
+
+
+#navigationBtn:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+#projectImages {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+.projects_overview {
+    width: 100%;
+    text-align: center;
+    color: white;
+
+   
+}
+.project {
+    display: flex;
+    padding: 10px;
+    color: white;
+    animation: slideInRight .8s linear forwards;
+    border-bottom: 2px solid white;
+}
+
+.project:last-of-type {
+    padding-bottom: 100px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+footer ul {
+   list-style: none;
+   display: flex;
+  
+
+}
+footer ul li {
+     
+    border: none;
+}
+footer ul li a {
+    color: rgb(213, 134, 134);
+    font-style:italic;
+    border: none;
+    outline: none;
+    border-style: none;
+    
+    
+}
+
+aside {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    width: 40%;
+    background-color: rgba(0, 0, 0,0.9);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    
+}
+
+aside li, li a {
+    padding: 50px;
+    color: white;
+    list-style: none;
+    border: none;
+}
+
+.show {
+    display: flex;
+}
+
+
+@keyframes colorChangeSlideIn {
+    0% {
+        background-color: rgb(216, 216, 216);
+        transform: translateX(-100%);
+    }
+    100% {
+        background-color: rgb(43, 37, 37);
+    }
+    
+}
+@keyframes slideInRight {
+    0% {
+        background-color: rgb(216, 216, 216);
+        transform: translateX(100%);
+    }
+    100% {
+        background-color: rgb(43, 37, 37);
+    }
+    
+}
+
+@media only screen and (max-width : 600px) {
+    
+#sidebar {
+    width: 100%;
+}
+section {
+    flex-direction: column;
+}
+    
+    
+}
+
