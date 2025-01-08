@@ -1,5 +1,8 @@
 @import url('./components/header/header_styles.css'); /* Import CSS specific to header */
 @import url('./components/footer/footer_styles.css');
+@import url('./components//sidebar/sidebar.css');
+@import url('./components/contact/contact_styles.css');
+
 html {
     background-color: rgb(13, 12, 12);
     overflow-x: hidden;
@@ -15,18 +18,7 @@ body {
 
 
 
-#name {
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-#role {
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-}
+
 #navigationBtn {
     position: absolute;
     left: 10px;
@@ -79,48 +71,7 @@ body {
 .project:last-of-type {
     padding-bottom: 100px;
 }
-.show {
-    position: fixed;
-    z-index: 50;
-    width: 40%;
-    background-color: rgba(18, 18, 18, 0.9);
-    left: 0;
-    top: 0;
-    bottom: 0;
-    
-    
-}
 
-.show ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    
-}
-
-.show li {
-    margin: 50px;
-    color: black;
-    list-style: none;
-    border: none;
-    text-decoration: none;
-    
-}
-.show button {
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    min-width: 200px;
-    background-color: transparent;
-    border: none;
-    font-size: 1rem;
-}
-.show button:hover {
-    cursor: pointer;
-}
 
 .hide {
     display: none;
@@ -128,16 +79,7 @@ body {
 }
 
 
-@keyframes colorChangeSlideIn {
-    0% {
-        background-color: rgb(216, 216, 216);
-        left: -100%;
-    }
-    100% {
-        background-color: rgb(43, 37, 37);
-        left: 0;
-    }
-}
+
     
 
 @keyframes slideInRight {
@@ -146,7 +88,7 @@ body {
         transform: translateX(100%);
     }
     100% {
-        background-color: rgb(43, 37, 37);
+        background-color: transparent;
     }
     
 }
