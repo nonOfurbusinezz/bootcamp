@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ranking</title>
+</head>
+<body>
+    <h1>Best Movies According To Me</h1>
+    <h2>Top Three Movies Of All-time</h2>
+    <hr>
+    
+    <h3 class="movieTitle">Lord of the Rings</h3>
+    <p>Tolkiens imagination was very well captured by Peter Jackson</p>
+   
+
+    <h3 class="movieTitle">Full Metal Jacket</h3>
+    <p>An alltime classic, capturing the experience of the Vietnam war</p>
+
+    <h3 class="movieTitle">Fight Club</h3>
+    <p>A way to get in contact with every teenagers inner rebell</p>
+    <style>
+          body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: blanchedalmond;
+        }
+        hr {
+            background-color: rgb(0, 0, 0);
+            height: 2px;
+            width: 100%;
+           
+        }
+        .movieTitle {
+            font-size : 1.2rem;
+            color: rgb(77, 79, 76);
+            border-bottom: .1rem dotted black;
+            max-width:400px;
+            text-align: center;
+            cursor: pointer;
+        }
+        p {
+            font-style: italic;
+            font-size: 1rem;
+            color: gold;
+            background-color: rgb(26, 19, 19);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+
+<script>
+    const handleTitleSelect = (e) => {
+        e.preventDefault();
+        const value = e.target.innerText;
+        switch(value) {
+            case("Lord of the Rings") : window.open("https://www.imdb.com/title/tt0120737/");
+            break;
+            case("Full Metal Jacket") : window.open("https://www.imdb.com/title/tt0093058/");
+            break;
+            case("Fight Club") : window.open("https://www.imdb.com/de/title/tt0137523/");
+            break;
+
+        }
+     
+    } 
+    
+    const titles = document.getElementsByClassName('movieTitle');
+
+    for(title of titles) {
+        title.addEventListener('click', handleTitleSelect)
+    }
+            </script>
+</body>
+</html>

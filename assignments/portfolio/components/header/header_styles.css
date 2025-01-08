@@ -1,0 +1,10 @@
+header {
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
+    border-bottom: 5px solid salmon;
+    animation: colorChangeSlideIn .7s linear forwards;
+
+}
+header  {
+    z-index: 300;
+}

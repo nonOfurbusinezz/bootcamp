@@ -1,3 +1,5 @@
+@import url('./components/header/header_styles.css'); /* Import CSS specific to header */
+@import url('./components/footer/footer_styles.css');
 html {
     background-color: rgb(13, 12, 12);
     overflow-x: hidden;
@@ -11,16 +13,7 @@ body {
     
 }
 
-header {
-    background-color: rgb(219, 219, 219);
-    padding: 10px;
-    border-bottom: 5px solid salmon;
-    animation: colorChangeSlideIn .7s linear forwards;
 
-}
-header  {
-    z-index: 300;
-}
 
 #name {
     color: white;
@@ -86,47 +79,11 @@ header  {
 .project:last-of-type {
     padding-bottom: 100px;
 }
-
-footer {
-    background-color: black;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 100px;
-}
-footer ul {
-   list-style: none;
-   display: flex;
-  
-
-}
-footer ul li {
-     
-    border: none;
-}
-footer ul li a {
-    color: rgb(213, 134, 134);
-    font-style:italic;
-    border: none;
-    outline: none;
-    border-style: none;
-    
-    
-}
-
 .show {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 50;
     width: 40%;
-    background-color: rgba(0, 0, 0,0.9);
+    background-color: rgba(18, 18, 18, 0.9);
     left: 0;
     top: 0;
     bottom: 0;
@@ -134,11 +91,35 @@ footer ul li a {
     
 }
 
-.show li, li a {
-    padding: 50px;
-    color: white;
+.show ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.show li {
+    margin: 50px;
+    color: black;
     list-style: none;
     border: none;
+    text-decoration: none;
+    
+}
+.show button {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 200px;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+}
+.show button:hover {
+    cursor: pointer;
 }
 
 .hide {
