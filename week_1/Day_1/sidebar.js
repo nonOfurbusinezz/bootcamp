@@ -1,11 +1,12 @@
-const navButton = document.getElementById("sidebar");
+const navButton = document.getElementById("navigationBtn");
+const sidebar = document.getElementById("sidebar");
 
 const openOrCloseSidebarHandler = () => {
-    if(navButton.classList.contains("show")) {
-        navButton.classList.remove("show");
+    
+
+    sidebar.classList.toggle("show")
+    sidebar.classList.toggle("hide")
+
     }
-    else {
-        navButton.classList.add("show");
-    }
-}
+
 navButton.addEventListener("click", openOrCloseSidebarHandler)

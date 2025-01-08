@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100dvh;
+    position: relative;
     
 }
 
@@ -15,6 +16,10 @@ header {
     padding: 10px;
     border-bottom: 5px solid salmon;
     animation: colorChangeSlideIn .7s linear forwards;
+
+}
+header  {
+    z-index: 300;
 }
 
 #name {
@@ -30,7 +35,7 @@ header {
     text-align: center;
 }
 #navigationBtn {
-    position: fixed;
+    position: absolute;
     left: 10px;
     top: 10px;
     height: 50px; width: 50px;
@@ -38,17 +43,22 @@ header {
     opacity: 0.4;
     border: none;
     background-color: transparent;
+    z-index: 100;
+    
     
 }
+
 .fa-bars {
     color: rgb(255, 255, 255);
     font-size: 1.4rem;
+    
 }
 
 
 #navigationBtn:hover{
     cursor: pointer;
     opacity: 1;
+   
 }
 
 #projectImages {
@@ -109,43 +119,46 @@ footer ul li a {
     
 }
 
-aside {
-    position: absolute;
+.show {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 50;
     width: 40%;
     background-color: rgba(0, 0, 0,0.9);
     left: 0;
     top: 0;
     bottom: 0;
-    display: none;
+    
     
 }
 
-aside li, li a {
+.show li, li a {
     padding: 50px;
     color: white;
     list-style: none;
     border: none;
 }
 
-.show {
-    display: flex;
+.hide {
+    display: none;
+ 
 }
 
 
 @keyframes colorChangeSlideIn {
     0% {
         background-color: rgb(216, 216, 216);
-        transform: translateX(-100%);
+        left: -100%;
     }
     100% {
         background-color: rgb(43, 37, 37);
+        left: 0;
     }
-    
 }
+    
+
 @keyframes slideInRight {
     0% {
         background-color: rgb(216, 216, 216);
