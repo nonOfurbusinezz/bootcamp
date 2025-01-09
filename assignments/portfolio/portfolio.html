@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./portfolio_styles.css" rel="stylesheet"></link>
-    <script src="./sidebar.js" defer></script>
+    <link href="portfolio_styles.css" rel="stylesheet"></link>
+    <script type="module" src="./portfolio.mjs"></script>
+    <script src="./javascript/siebar.js" defer></script>
+    <script src="./javascript/sidebar_navigation_logic.js" defer></script>
     <script src="https://kit.fontawesome.com/5192d0f9da.js" crossorigin="anonymous"></script>
 
     <title>Thomas Zika</title>
@@ -12,7 +14,7 @@
 
 
 <body>
-    <header>
+    <header id="header">
     <button id="navigationBtn">
         <i class="fa-solid fa-bars"></i>
 
@@ -20,12 +22,8 @@
        <h1 id="name">Thomas Zika</h1>
        <p id="role">Web Developer</p>
    </header>
-    <aside id="sidebar" class="hide">
-        <ul>
-            <li><a href="./pages/contact.html"><button>Contact</button></a></li>
-            <li><a href="#"><button>Test</button></a></li>
-            <li><a href="#"><button>Test</button></a></li>
-        </ul>
+    <aside id="sidebar" class="hide sidebar">
+    
     </aside>
 <h3 class="projects_overview">Projects</h3>
 
@@ -53,14 +51,8 @@
 
 
 </section>
-<footer>
+<footer id="footer">
 
-    <ul>
-        <li><a href="#">Test</a></li>
-        <li><a href="#">Test</a></li>
-        <li><a href="#">Test</a></li>
- 
-    </ul>
 
 </footer>
 </body>

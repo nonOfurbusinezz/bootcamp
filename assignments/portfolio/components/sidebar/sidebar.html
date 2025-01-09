@@ -1,10 +1,26 @@
+
+<head>
+    <title>Sidebar Component</title>
+   
+    <script src="../../javascript/sidebar_navigation_logic.js" defer></script> <!-- JavaScript specific to this component -->
+    <script src="../../javascript//sidebar_navigation_logic.js"></script>
+</head>
+<script>
+    const pages = {
+        home : './pages/contact.html',
+        about : './pages/about.html',
+        contact : './contact/contact.html',
+    }
+    let sidebarState = localStorage.getItem("sidebarstate");
+    if(!sidebarState){
+
+        console.error('there has been an error loading the selected pages')
+    }
+</script>
 <div>
     <ul>
-        <li><a href="../../portfolio/portfolio.html"><button id="firstBtn" value="Contact">Home</button></a></li>
-        <li><a href="#"><button button id="secondBtn" value="Home">Test</button></a></li>
-        <li><a href="#"><button button id="ThirdBtn" value="About">About</button></a></li>
+        <li><a href="./pages/contact.html"><button id="firstBtn" value="Contact">Home</button></a></li>
+        <li><a href="#"><button id="secondBtn" value="Home">Test</button></a></li>
+        <li><a href="#"><button id="thirdBtn" value="About">About</button></a></li>
     </ul>
 </div>
-
-
-    

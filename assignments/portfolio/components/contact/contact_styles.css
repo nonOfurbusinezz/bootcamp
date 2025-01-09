@@ -6,7 +6,7 @@ form {
   justify-content: center;
   align-items: center;
   color: white;
-  z-index: 100;
+  z-index: 70;
  
  
 }
@@ -43,12 +43,12 @@ label{
 
 }
 #submitBtn:hover {
-background-color: white;
+
 cursor: pointer;
-animation: buttonHover 3s ease-in-out;
+animation: buttonHover 0.5s forwards;
 }
 .contact {
-    z-index: 100;
+    z-index: 90;
 }
 
 
@@ -72,9 +72,12 @@ animation: buttonHover 3s ease-in-out;
 @keyframes buttonHover {
     0% {
         background-position: 100% 0%;
+
     }
     100% {
         background-position: 0% 0%;
+		color: rgb(174, 248, 174);
+		font-weight: 500;
     }
 }
 

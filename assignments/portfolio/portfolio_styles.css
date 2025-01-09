@@ -1,6 +1,6 @@
 @import url('./components/header/header_styles.css'); /* Import CSS specific to header */
 @import url('./components/footer/footer_styles.css');
-@import url('./components//sidebar/sidebar.css');
+@import url('./components/sidebar/sidebar.css');
 @import url('./components/contact/contact_styles.css');
 
 html {
